@@ -1,0 +1,33 @@
+package com.example.oauth2.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+/**
+ * Created by NhanNguyen on 4/16/2021
+ *
+ * @author: NhanNguyen
+ * @date: 4/16/2021
+ */
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity(name = "dbo_user_role")
+public class UserRole {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "id")
+    private long id;
+
+    @Column(name = "role_id")
+    private long roleId;
+
+    @Column(name = "user_id")
+    private long userId;
+}
