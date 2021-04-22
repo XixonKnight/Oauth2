@@ -64,4 +64,16 @@ public class User {
             inverseJoinColumns = {@JoinColumn(name = "role_id",referencedColumnName = "id")})
     private List<Role> roles;
 
+    public User(User user) {
+        this.username = user.getUsername();
+        this.passwordHash = user.getPasswordHash();
+        this.gender = user.getGender();
+        this.dob = user.getDob();
+        this.createdDate = user.getCreatedDate();
+        this.enable = user.isEnable();
+        this.accountNonExpired = user.isAccountNonExpired();
+        this.credentialsNonExpired = user.isCredentialsNonExpired();
+        this.accountNonLocked = user.isAccountNonLocked();
+        this.roles = user.getRoles();
+    }
 }

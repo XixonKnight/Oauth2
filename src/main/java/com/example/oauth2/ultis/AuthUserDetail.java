@@ -19,6 +19,7 @@ public class AuthUserDetail extends User implements UserDetails {
 
 
     public AuthUserDetail(User user) {
+        super(user);
     }
 
     public AuthUserDetail() {
